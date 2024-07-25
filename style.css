@@ -47,7 +47,7 @@ h1 {
 }
 
 input {
-    width: 20rem;
+    width: calc(100% * (1/2) - 10px - 1px);
     height: 1.5rem;
     padding-right: 0.75rem;
     padding-bottom: 1.4rem;
@@ -72,7 +72,7 @@ input {
     margin-top: 0.5625rem;
 }
 
-button {
+.btn-login {
     color: #fff;
     font-weight: 700;
     font-family: "Poppins", sans-serif;
@@ -81,17 +81,39 @@ button {
     border: none;
     background: linear-gradient(68deg, #9181F4, #5038ED);
     margin: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-button:hover{
+.btn-login:hover{
     background: linear-gradient(68deg, #7b68f5d3, #3d22e9);
     cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-h2 {
-    color: #525252;
-    margin: 1rem;
+.line-container {
+    position: relative;
+    text-align: center;
+    margin: 10px 0;
+    
+}
+
+.line-container h2 {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    background: #fff; 
     font-weight: 200;
+    color: #525252; 
+}
+
+.line-container h2:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    right: -50%;
+    border-top: 1px solid #F0EDFF;
+    z-index: -1;
 }
 
 strong{
@@ -124,8 +146,13 @@ strong{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: calc(100% * (1) - 10px - 1px);
-    margin: 0.75rem;
+    width: calc(100% * (1/2) - 10px - 1px);
+    margin: 0.5rem;
+    padding: 10px;
+    border: 1px solid #F0EDFF;
+    border-radius: 46px;
+    background-color: #fff;
+    /* width: fit-content; */
 }
 
 .child:hover {
